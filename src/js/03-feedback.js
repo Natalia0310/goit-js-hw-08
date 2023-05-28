@@ -35,7 +35,7 @@ function onFormInput(event) {
 }
 
 function populateForm() {
-  const savedForm = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  const savedForm = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
   if (savedForm.email) {
     inputEl.value = savedForm.email;
